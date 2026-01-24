@@ -20,26 +20,31 @@
     --shadow: 0 18px 55px rgba(0,0,0,.55);
     --radius: 18px;
     --max: 1080px;  
-    /* ===== Mobile Hero Fix ===== */
+   /* ===== MOBILE HERO FIX ===== */
 @media (max-width: 640px) {
 
   .hero {
-    padding: 26px 16px;
+    padding: 22px 14px;
+    border-radius: 16px;
+  }
+
+  .hero-inner {
+    max-width: 100%;
   }
 
   .logo {
-    width: 120px;
+    width: 110px;
     margin-bottom: 12px;
   }
 
   h1 {
-    font-size: 30px;
-    line-height: 1.15;
+    font-size: 28px;
+    margin-bottom: 6px;
   }
 
   .sub {
     font-size: 16px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .hero p {
@@ -47,8 +52,15 @@
   }
 
   .hero-ctas {
-    gap: 10px;
+    gap: 8px;
   }
+
+  .chip {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+}
+
 
   .chip {
     font-size: 11px;
