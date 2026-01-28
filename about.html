@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Lone Star Auto Shine</title>
+  <meta name="description" content="Learn about Lone Star Auto Shine and meet the owner. Mobile car detailing in Mineral Wells, TX and surrounding areas." />
+
+  <!-- SAME THEME/STYLES AS YOUR HOMEPAGE (keeps everything matched) -->
+  <style>
+    :root{
+      --bg:#07090d;
+      --bg2:#0b0f17;
+      --card:rgba(255,255,255,.06);
+      --card2:rgba(255,255,255,.09);
+      --text:#f3f5f7;
+      --muted:rgba(243,245,247,.78);
+      --red:#ff1f1f;
+      --red2:#b80000;
+      --stroke:rgba(255,255,255,.12);
+      --shadow: 0 18px 55px rgba(0,0,0,.55);
+      --radius: 18px;
+      --max: 1080px;  
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 18% -10%, rgba(255,31,31,.18), transparent 60%),
+        radial-gradient(900px 600px at 92% 10%, rgba(255,31,31,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      min-height:100vh;
+    }
+
+    body:before{
+      content:"";
+      position:fixed; inset:0;
+      background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      opacity:.10;
+      pointer-events:none;
+      mix-blend-mode: overlay;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+
+    /* Sticky nav */
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+      padding:10px 0 18px;
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: rgba(11, 11, 23, .75);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight:800; letter-spacing:.6px;
+      text-transform:uppercase;
+      opacity:.95;
+    }
+
+    .nav-logo{
+      height: 32px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      display:block;
+      filter: drop-shadow(0 4px 10px rgba(255,0,0,.25));
+    }
+
+    .brand-text{ display:inline; }
+    .nav-actions{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;}
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px;
+      border-radius: 999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:750;
+      letter-spacing:.2px;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.18); }
+
+    .btn.primary{
+      background: linear-gradient(180deg, var(--red), var(--red2));
+      border-color: rgba(255,31,31,.55);
+      box-shadow: 0 18px 55px rgba(255,31,31,.20);
+    }
+
+    .hero{
+      position:relative;
+      border:1px solid var(--stroke);
+      background: linear-gradient(180deg, rgba(255,31,31,.12), rgba(255,255,255,.03));
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      padding: 34px 22px;
+      overflow:hidden;
+    }
+
+    .hero-inner{
+      max-width: 860px;
+      margin: 0 auto;
+      text-align:center;
+      position:relative;
+      z-index:1;
+    }
+
+    h1{
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 46px);
+      letter-spacing: .6px;
+      text-transform: uppercase;
+    }
+
+    .sub{
+      margin: 0 auto 0;
+      max-width: 860px;
+      color: var(--muted);
+      font-size: clamp(16px, 1.8vw, 20px);
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    .section{ padding: 34px 0; }
+
+    .card{
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 14px 40px rgba(0,0,0,.45);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing:.35px;
+      text-transform: uppercase;
+    }
+
+    .card p{
+      margin: 0 0 14px;
+      color: rgba(243,245,247,.82);
+      line-height:1.7;
+    }
+
+    .divider{
+      height:1px; background: rgba(255,255,255,.10);
+      margin: 18px 0 14px;
+    }
+
+    .tagline{
+      margin-top: 14px;
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
+
+    footer{
+      padding: 26px 0 40px;
+      color: rgba(243,245,247,.68);
+      font-size: 13px;
+      text-align:center;
+    }
+
+    @media (max-width: 520px){
+      .wrap{ padding: 12px; }
+      .nav{ padding: 10px 0 10px; gap: 10px; }
+      .nav-logo{ height: 26px; }
+      .brand-text{ display:none; }
+      .btn{ padding: 9px 12px; font-size: 12px; }
+      .hero{ padding: 22px 14px; border-radius: 14px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- NAV -->
+    <div class="nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Lone Star Auto Shine logo" class="nav-logo">
+        <span class="brand-text">Lone Star Auto Shine</span>
+      </div>
+      <div class="nav-actions">
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn" href="index.html#monthly">Monthly Program</a>
+        <a class="btn primary" href="https://book.squareup.com/appointments/5kywqa3r4wr6db/location/LVKZDX0J6YVKQ/services" target="_blank">Book Now</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>About Us</h1>
+        <p class="sub">Locally owned. Professional results. No shortcuts.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT + OWNER -->
+    <section class="section">
+      <div class="card">
+        <h2>About Lone Star Auto Shine</h2>
+        <p>
+          At <strong>Lone Star Auto Shine</strong>, we take pride in delivering high-quality mobile auto detailing
+          with attention to detail you can see and feel. What started as a passion for clean vehicles
+          turned into a business built on hard work, consistency, and customer satisfaction.
+        </p>
+        <p>
+          We are a locally owned and operated business serving Mineral Wells and surrounding areas.
+          Our goal is simple: provide reliable, professional detailing services that restore,
+          protect, and maintain your vehicle—without cutting corners.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Meet the Owner</h2>
+        <p>
+          <strong>Lone Star Auto Shine</strong> is owned and operated by <strong>Kayden Montalvo</strong>, a local entrepreneur
+          and college student who built the business with a focus on quality, consistency, and customer trust.
+        </p>
+        <p>
+          Every vehicle is personally detailed with care and attention to detail, using proven techniques
+          and professional-grade products. As a locally owned business, accountability matters—when you book,
+          you’re working directly with the owner.
+        </p>
+
+        <p class="tagline">Want that showroom shine? Book today.</p>
+
+        <a class="btn primary" href="sms:+19404528097">Not sure if you’re in range? Text us.</a>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Lone Star Auto Shine • Mineral Wells, TX •
+      <a href="tel:+19404528097">940-452-8097</a>
+    </footer>
+
+  </div>
+</body>
+</html>
